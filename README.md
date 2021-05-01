@@ -26,3 +26,9 @@
 - 모든 차의 판단이 끝나면 회차 정보를 출력한다
 - 회차가 모두 끝나면 최종 우승자를 판단한다 
 - 최중 우승자를 출력한다 
+
+---
+
+### 참고 및 새로 학습한 것들
+- https://github.com/00hongjun/java-baseball
+    - java 프로젝트 패키지 구조, ParameterizedTest
