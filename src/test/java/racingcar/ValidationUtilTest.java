@@ -35,4 +35,11 @@ public class ValidationUtilTest {
 		List<String> actual = ValidationUtil.parseStringWithDelimiter(testSource, ",");
 		Assertions.assertEquals(expect, actual);
 	}
+
+	@Test
+	@DisplayName("레이스횟수_음수_불허용")
+	void 레이스횟수_음수_불허용(){
+		boolean isValidNumRace = ValidationUtil.validNumRace(-10);
+		assertThat(isValidNumRace).isFalse();
+	}
 }

@@ -14,5 +14,6 @@ public class RacingcarApplication {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+        int numRace = InputView.enterNumRace();
 	}
 }

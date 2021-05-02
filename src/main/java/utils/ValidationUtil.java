@@ -18,4 +18,11 @@ public class ValidationUtil {
 	public static List<String> parseStringWithDelimiter(String source, String delimiter){
 		return new ArrayList<>(Arrays.asList(source.split(delimiter)));
 	}
+
+	public static boolean validNumRace(int numRace) {
+		if(numRace <= 0){
+			return false;
+		}
+		return true;
+	}
 }
