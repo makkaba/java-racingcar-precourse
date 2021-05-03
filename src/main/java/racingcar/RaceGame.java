@@ -1,6 +1,8 @@
 package racingcar;
 
 import racingcar.domain.Car;
+import racingcar.domain.GameResult;
+import utils.RandomGeneratorUtil;
 
 import java.util.List;
 
@@ -20,6 +22,9 @@ public class RaceGame {
 	}
 
 	private void process() {
-		System.out.println("process");
+		cars.forEach(x -> {
+			x.goFoward((RandomGeneratorUtil.generateRandom()));
+			x.print();
+		});
 	}
 }
