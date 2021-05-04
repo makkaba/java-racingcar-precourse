@@ -1,7 +1,6 @@
 package racingcar;
 
 import racingcar.domain.Car;
-import racingcar.domain.GameResult;
 import racingcar.domain.LeaderBoard;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
@@ -19,8 +18,8 @@ public class RacingcarApplication {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-        int numRace = InputView.enterNumRace();
-        RaceGame raceGame = new RaceGame(cars, numRace);
+        int circuitNum = InputView.askCircuitNum();
+        RaceGame raceGame = new RaceGame(cars, circuitNum);
         List<Car> carsAfterRace = raceGame.start();
 		LeaderBoard leaderBoard = new LeaderBoard(carsAfterRace);
 		OutputView.printWhoIsWinner(leaderBoard.whoIsWinner());

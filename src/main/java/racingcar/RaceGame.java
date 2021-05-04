@@ -1,27 +1,25 @@
 package racingcar;
 
 import racingcar.domain.Car;
-import racingcar.domain.GameResult;
 import racingcar.view.OutputView;
 import utils.RandomGeneratorUtil;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class RaceGame {
 	private List<Car> cars;
 	private List<Car> winners;
-	private int numRace;
+	private int circuitNum;
 
-	public RaceGame(List<Car> cars, int numRace){
+	public RaceGame(List<Car> cars, int circuitNum){
 		this.cars = cars;
-		this.numRace = numRace;
+		this.circuitNum = circuitNum;
 		this.winners = new ArrayList<>();
 	}
 
 	public List<Car> start() {
-		for (int i=0; i<numRace; i++){
+		for (int i = 0; i< circuitNum; i++){
 			process();
 		}
 		return cars;
@@ -33,9 +31,5 @@ public class RaceGame {
 			OutputView.printCarStatus(car);
 		});
 		OutputView.printNewLine();
-	}
-
-	public List<Car> getCars() {
-		return cars;
 	}
 }

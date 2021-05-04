@@ -17,7 +17,7 @@ public class InputView {
 		return ValidationUtil.parseStringWithDelimiter(userInput, DELIMITER);
 	}
 
-	public static int enterNumRace(){
+	public static int askCircuitNum(){
 		int userInput;
 		do {
 			System.out.println(INPUT_NUM_RACE_MESSAGE);
