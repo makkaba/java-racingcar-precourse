@@ -40,15 +40,9 @@ public class Car {
 		return Objects.hash(name);
 	}
 
-	public void print() {
-		System.out.println(this.name + ":"+ visualizeDistance());
-	}
 
-	public String visualizeDistance(){
-		StringBuilder stringBuilder = new StringBuilder();
-		for (int i=0; i<distance; i++){
-			stringBuilder.append("-");
-		}
-		return stringBuilder.toString();
+
+	public String getName() {
+		return this.name;
 	}
 }

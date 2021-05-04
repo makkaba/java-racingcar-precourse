@@ -2,7 +2,9 @@ package racingcar;
 
 import racingcar.domain.Car;
 import racingcar.domain.GameResult;
+import racingcar.domain.LeaderBoard;
 import racingcar.view.InputView;
+import racingcar.view.OutputView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +12,7 @@ import java.util.List;
 public class RacingcarApplication {
 
     public static void main(String[] args){
-		List<Car> cars = new ArrayList<Car>();
+		List<Car> cars = new ArrayList<>();
         List<String> carNames = InputView.enterCarNames();
         try {
         	cars = CarFactory.createWithNames(carNames);
@@ -19,6 +21,8 @@ public class RacingcarApplication {
 		}
         int numRace = InputView.enterNumRace();
         RaceGame raceGame = new RaceGame(cars, numRace);
-        GameResult gameResult = raceGame.start();
+        List<Car> carsAfterRace = raceGame.start();
+		LeaderBoard leaderBoard = new LeaderBoard(carsAfterRace);
+		OutputView.printWhoIsWinner(leaderBoard.whoIsWinner());
 	}
 }

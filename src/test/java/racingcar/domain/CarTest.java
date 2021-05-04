@@ -16,12 +16,4 @@ class CarTest {
     	car.goFoward(6);
 		Assertions.assertEquals(1, car.getDistance());
     }
-
-	@DisplayName("이동거리_하이픈_변환")
-	@Test
-	void 이동거리_하이픈_변환(){
-		Car car = new Car("jeff");
-		car.goFoward(6);
-		car.goFoward(6);
-		Assertions.assertEquals("--", car.visualizeDistance());
-	}}
+}
